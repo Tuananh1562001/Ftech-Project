@@ -43,7 +43,7 @@ export default {
   name: "Student",
   props: ["studentsList"],
   data: () => ({
-    fields: ["id","name","gender","email","address","phone","Actions"],
+    fields: ["name","gender","email","address","phone","Actions"],
     perPage: 6,
     currentPage: 1,
     filter: "",
@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     deleteItem(deleteItem) {
-      console.log(deleteItem.id)
+      // console.log(deleteItem.id)
       this.$emit('delete',)
       for(let i=0; i<this.studentsList.length; i++){
         if(deleteItem.id === this.studentsList[i].id){
